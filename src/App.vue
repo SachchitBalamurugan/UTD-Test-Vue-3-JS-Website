@@ -20,15 +20,20 @@
       </select>
     </div>
     <div id="map"></div>
+    <wind-data></wind-data>
   </div>
 </template>
 
 <script>
 import L from 'leaflet';
 import Papa from 'papaparse';
+import WindData from './components/windData.vue';
 
 export default {
   name: 'App',
+  components: {
+    WindData // Register the WindData component
+  },
   data() {
     return {
       map: null,
